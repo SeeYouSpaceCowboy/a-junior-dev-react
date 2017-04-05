@@ -1,0 +1,108 @@
+* {
+  /*background-color: rgba(200, 100, 255, 0.2);*/
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1.5px;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0.25em;
+}
+
+p, a {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: #919191;
+}
+
+.App {
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.center {
+  text-align: center;
+}
+
+.space {
+  height: 5em;
+  width: 100%;
+}
+
+.small-space {
+  height: 2em;
+  width: 100%;
+}
+
+.large-space {
+  height: 15em;
+  width: 100%;
+}
+
+.full-width {
+  width: 80%;
+}
+
+.flexbox-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+  width: 50%;
+  background-color: #fff;
+  padding: 1em;
+}
+
+.icon {
+  padding: 0;
+  margin: 0;
+  margin: 3em;
+  min-width: 0;
+  width: 3em;
+  height: 3em;
+  display: block;
+  border: none;
+}
+
+input, button {
+  outline: none;
+  min-width: 17em;
+  border: 1px solid #e3e3e3;
+  padding: 1.25em 1em 1.25em 1em;
+  margin: 1em;
+  font-size: 12px;
+}
+
+input {
+  background-color: #fff;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #1c1c1c;
+  box-sizing:content-box;
+  transition:.5s;
+}
+
+button:hover {
+  border: 1px solid #b2b2b2;
+  color: #b2b2b2;
+}
+
+.primary {
+  background: #1c1c1c;
+  color: #fff;
+}
+
+.primary:hover {
+  background-color: #444;
+  border: 1px solid #444;
+  color: #fff;
+}
