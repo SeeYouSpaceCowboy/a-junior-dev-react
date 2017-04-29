@@ -33,18 +33,25 @@ class SearchBar extends Component {
     if(this.state.sortedListing.length === 0) return null
 
     return (
-      <div>
+      <div className='row'>
         {
           this.state.sortedListing.map((listing, i) => {
             return (
-              <div className='search-results card'>
+              <div key={ i } className='col-12 card'>
                 <h1>{ listing.position } at { listing.company }</h1>
                 <h4>{ listing.street },  { listing.city } { listing.state } { listing.zipcode }</h4>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum enim vitae pellentesque fringilla. Vivamus eleifend faucibus ipsum, nec rutrum nulla imperdiet lacinia. Phasellus euismod enim sit amet ante luctus, in rhoncus arcu egestas. Integer eu tempor quam. Fusce nec ante tellus.
                 </p>
-                <button className='primary'>Apply</button>
-                <button>Site</button>
+
+                <div className='row'>
+                  <div className='col-3'>
+                    <a href={ listing.company_url } target='_blank'><button className='fill primary'>Apply</button></a>
+                  </div>
+                  <div className='col-3'>
+                    <a href={ listing.company_url } target='_blank'><button className='fill'>Site</button></a>
+                  </div>
+                </div>
               </div>
             )
           })
@@ -63,16 +70,19 @@ class SearchBar extends Component {
 
   render() {
     const searchResults = this.renderResults()
-    debugger
+
     return (
-      <div className='search-container' >
-        <div>
+      <div className='row search-container' >
+        <div className='col-9'>
           <input
             ref='search'
-            className='search-bar'
+            className='fill'
             placeholder='Keywords ( Example Fullstack, Backend, Rails ) . . .'
             onChange={ this.onInputChange } />
-          <button className='primary'>Search</button>
+        </div>
+
+        <div className='col-3'>
+          <button className='col-12 primary'>Search</button>
         </div>
 
         { searchResults }

@@ -1,13 +1,18 @@
 import React from 'react'
 import { IndexRoute, Route, browserHistory } from 'react-router'
 import App from './App'
-import SearchPage from './components/SearchPage'
 import AboutPage from './components/AboutPage'
+import SearchPage from './components/SearchPage'
+import ApplyPage from './components/ApplyPage'
+import PostAJob from './components/PostAJob'
 
 export default (
   <Route path='/' component={ App }>
     <IndexRoute component={ SearchPage }/>
     <Route path='/about' component={ AboutPage } />
+    <Route path='/search' component={ SearchPage } />
+    <Route path='/applypage' component={ ApplyPage } />
+    <Route path='/postajob' component={ PostAJob } />
   </Route>
 )
 

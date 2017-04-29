@@ -1,14 +1,31 @@
-import React, { Component } from 'react';
-import NavbarMenu from './components/NavbarMenu'
+import React, { Component } from 'react'
+import { browserHistory } from 'react-router'
+import FixedButton from './components/FixedButton'
 import SideNav from './components/SideNav'
 
 class App extends Component {
+  constructor() {
+    super()
+
+    this.openSideMenu = this.openSideMenu.bind(this)
+  }
+
+  openSideMenu() {
+    document.getElementById('side-nav').style.width = '26em'
+  }
+
+  redirectToPostJobListing() {
+    browserHistory.push('/postajob')
+  }
+
   render() {
     return (
       <div className="App">
-        <NavbarMenu/>
+        <FixedButton id='navbar-menu-button' source='navbar-menu.png' callback={ this.openSideMenu }/>
         <SideNav/>
-        <div className='container'>
+        <FixedButton id='post-listing' source='upload.svg' callback={ this.redirectToPostJobListing }/>
+        <h3 className='black-logo-title'>A JUNIOR DEV</h3>
+        <div className='grid'>
           { this.props.children }
         </div>
       </div>

@@ -1,8 +1,3 @@
-#navbar-menu-button {
-  float: left;
-  position: fixed;
-}
-
 #side-nav {
   height: 100%;
   width: 0;
@@ -25,4 +20,8 @@
 
 #side-nav a:hover {
   color: #fff;
+}
+
+.side-nav-link {
+  margin-bottom: 2em;
 }

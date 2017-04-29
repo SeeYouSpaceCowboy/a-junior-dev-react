@@ -6,14 +6,13 @@ class SearchPage extends Component {
     document.body.className = 'cover-background'
   }
 
-  componentWillUnMount() {
-    document.body.className = 'cover-background'
+  componentWillUnmount() {
+    document.body.className = ''
   }
 
   render() {
     return (
       <div>
-        <h3 id='search-title'>A JUNIOR DEV</h3> 
         <SearchBar/>
       </div>
     )
