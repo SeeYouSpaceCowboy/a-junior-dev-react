@@ -36,6 +36,14 @@ p, a {
   margin-right: auto;
 }
 
+.justify {
+  text-align: justify;
+}
+
+.black {
+  color: #000;
+}
+
 .space {
   height: 5em;
   width: 100%;

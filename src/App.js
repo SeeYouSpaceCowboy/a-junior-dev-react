@@ -24,7 +24,7 @@ class App extends Component {
         <FixedButton id='navbar-menu-button' source='navbar-menu.png' callback={ this.openSideMenu }/>
         <SideNav/>
         <FixedButton id='post-listing' source='upload.svg' callback={ this.redirectToPostJobListing }/>
-        <Link to='/home'><h3 className='black-logo-title'>A JUNIOR DEV</h3></Link>
+        <h3 className='black-logo-title'><Link className='black' to='/home'>A JUNIOR DEV</Link></h3>
         <div className='grid'>
           { this.props.children }
         </div>

@@ -63,10 +63,10 @@ class PostAJob extends Component {
             <div className='col-12'>
               <label>Type</label>
               <select className='fill' name='shift' onChange={ this.handleChange }>
-                <option value="full-time">$10 Full-time 60 days</option>
-                <option value="part-time">$5 Part-time 30 days</option>
-                <option value="contract">$3 Contract 45 days</option>
-                <option value="entry">$1 Internship/junior full-time/part-time 45 days</option>
+                <option value="full-time">Full-time 60 days</option>
+                <option value="part-time">Part-time 30 days</option>
+                <option value="contract">Contract 45 days</option>
+                <option value="entry">Internship/junior full-time/part-time 45 days</option>
               </select>
             </div>
           </div>
