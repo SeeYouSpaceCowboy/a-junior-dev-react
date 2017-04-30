@@ -16,5 +16,18 @@ export const listingAdapter = {
 
         return error
       })
+  },
+
+  createListing: (listing) => {
+    return axios.post('/listings', listing)
+      .then((response) => {
+        console.log("response listing")
+        browserHistory.push('/')
+        return response.data
+      }).catch((error) => {
+        console.log('Failed to create Listing')
+
+        return error
+      })
   }
 }

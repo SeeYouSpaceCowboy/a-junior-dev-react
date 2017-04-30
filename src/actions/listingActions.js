@@ -8,3 +8,11 @@ export const fetchAllListings = () => {
     payload: response
   }
 }
+
+export const createListing = (listing) => {
+  const reponse = listingAdapter.createListing(listing)
+
+  return {
+    type: 'CREATE_LISTING'
+  }
+}

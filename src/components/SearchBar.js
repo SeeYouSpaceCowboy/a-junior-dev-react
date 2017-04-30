@@ -40,7 +40,8 @@ class SearchBar extends Component {
               <div key={ i } className='col-12 card'>
                 <h1>{ listing.position } at { listing.company }</h1>
                 <h4>{ listing.street },  { listing.city } { listing.state } { listing.zipcode }</h4>
-                <p>
+                <h6>Compensation { listing.compensation }</h6>
+                <p className='justify'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum enim vitae pellentesque fringilla. Vivamus eleifend faucibus ipsum, nec rutrum nulla imperdiet lacinia. Phasellus euismod enim sit amet ante luctus, in rhoncus arcu egestas. Integer eu tempor quam. Fusce nec ante tellus.
                 </p>
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { browserHistory } from 'react-router'
+import { browserHistory, Link } from 'react-router'
 import FixedButton from './components/FixedButton'
 import SideNav from './components/SideNav'
 
@@ -24,7 +24,7 @@ class App extends Component {
         <FixedButton id='navbar-menu-button' source='navbar-menu.png' callback={ this.openSideMenu }/>
         <SideNav/>
         <FixedButton id='post-listing' source='upload.svg' callback={ this.redirectToPostJobListing }/>
-        <h3 className='black-logo-title'>A JUNIOR DEV</h3>
+        <Link to='/home'><h3 className='black-logo-title'>A JUNIOR DEV</h3></Link>
         <div className='grid'>
           { this.props.children }
         </div>

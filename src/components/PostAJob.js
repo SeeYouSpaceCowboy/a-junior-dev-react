@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { createListing } from '../actions/listingActions'
 
 class PostAJob extends Component {
   constructor() {
@@ -7,7 +9,7 @@ class PostAJob extends Component {
       listing: {
         listing: {
           position: '',
-          type: 'full-time',
+          shift: 'full-time',
           company: '',
           company_url: '',
           apply_url: '',
@@ -36,6 +38,15 @@ class PostAJob extends Component {
 
   submitListing(event) {
     event.preventDefault()
+    this.pleaseDeleteMe()
+    let listing = this.state.listing
+    this.props.createListing(listing)
+  }
+
+  pleaseDeleteMe() {
+    let listing = this.state.listing
+    listing['listing']['apply_url'] = this.state.listing.listing.company_url
+    this.setState({ listing })
     console.log(this.state.listing)
   }
 
@@ -51,7 +62,7 @@ class PostAJob extends Component {
           <div className='row'>
             <div className='col-12'>
               <label>Type</label>
-              <select className='fill' name='type' onChange={ this.handleChange }>
+              <select className='fill' name='shift' onChange={ this.handleChange }>
                 <option value="full-time">$10 Full-time 60 days</option>
                 <option value="part-time">$5 Part-time 30 days</option>
                 <option value="contract">$3 Contract 45 days</option>
@@ -166,4 +177,19 @@ class PostAJob extends Component {
   }
 }
 
-export default (PostAJob)
+const mapStateToProps = (state) => {
+  return {
+
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    createListing: (listing) => {
+      let action = createListing(listing)
+      dispatch(action)
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(PostAJob)

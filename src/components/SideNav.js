@@ -1,36 +1,10 @@
 import React, { Component } from 'react'
-import { browserHistory } from 'react-router'
-import LogOut from './LogOut'
+import { Link } from 'react-router'
 
-class SideNav extends Component {
+export default class SideNav extends Component {
   constructor() {
     super()
-
-    this.handleHome = this.handleHome.bind(this)
-    this.handleProfile = this.handleProfile.bind(this)
-    this.handleAbout = this.handleAbout.bind(this)
-    this.handlePostAJob = this.handlePostAJob.bind(this)
     this.onClose = this.onClose.bind(this)
-  }
-
-  handleHome() {
-    browserHistory.push('/')
-    this.onClose()
-  }
-
-  handleProfile() {
-    browserHistory.push('/')
-    this.onClose()
-  }
-
-  handleAbout() {
-    browserHistory.push('/about')
-    this.onClose()
-  }
-
-  handlePostAJob() {
-    browserHistory.push('/postajob')
-    this.onClose()
   }
 
   onClose() {
@@ -42,11 +16,11 @@ class SideNav extends Component {
       return (
         <div id='side-nav'>
           <input className='icon' type='image' src='close.svg' onClick={ this.onClose }/>
-          <a onClick={ this.handleHome }>Home</a>
-          <a onClick={ this.handleProfile }>Profile</a>
-          <a>Edit</a>
-          <a onClick={ this.handleAbout }>About</a>
-          <a onClick={ this.onClose }><LogOut/></a>
+          <Link to='/' className='side-nav-link' onClick={ this.onClose }>Home</Link>
+          <Link to='/' className='side-nav-link' onClick={ this.onClose }>Profile</Link>
+          <Link to='/' className='side-nav-link' onClick={ this.onClose }>Edit</Link>
+          <Link to='/about' className='side-nav-link' onClick={ this.onClose }>About</Link>
+          <Link to='/postajob' className='side-nav-link' onClick={ this.onClose }>Post A Job</Link>
         </div>
       )
     }
@@ -54,12 +28,10 @@ class SideNav extends Component {
     return (
       <div id='side-nav'>
         <input className='icon' type='image' src='close.svg' onClick={ this.onClose }/>
-        <a className='side-nav-link' onClick={ this.handleHome }>Home</a>
-        <a className='side-nav-link' onClick={ this.handleAbout }>About</a>
-        <a className='side-nav-link' onClick={ this.handlePostAJob }>Post A Job</a>
+        <Link to='/' className='side-nav-link' onClick={ this.onClose }>Home</Link>
+        <Link to='/about' className='side-nav-link' onClick={ this.onClose }>About</Link>
+        <Link to='/postajob' className='side-nav-link' onClick={ this.onClose }>Post A Job</Link>
       </div>
     )
   }
 }
-
-export default SideNav

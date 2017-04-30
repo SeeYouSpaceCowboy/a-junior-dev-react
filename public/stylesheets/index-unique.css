@@ -21,3 +21,7 @@
   border-bottom: 1px solid #d0d0d0;
   margin-bottom: 0.75em;
 }
+
+.justify {
+  text-align: justify;
+}
