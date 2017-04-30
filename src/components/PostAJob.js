@@ -177,12 +177,6 @@ class PostAJob extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-
-  }
-}
-
 const mapDispatchToProps = (dispatch) => {
   return{
     createListing: (listing) => {

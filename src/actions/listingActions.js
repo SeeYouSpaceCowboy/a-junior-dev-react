@@ -10,7 +10,7 @@ export const fetchAllListings = () => {
 }
 
 export const createListing = (listing) => {
-  const reponse = listingAdapter.createListing(listing)
+  listingAdapter.createListing(listing)
 
   return {
     type: 'CREATE_LISTING'
