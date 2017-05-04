@@ -11,7 +11,11 @@ body {
   background-color: #ececec;
 }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h2 {
+  margin: 0.1em;
+}
+
+h1, h3, h4, h5, h6, a {
   margin: 0.25em;
 }
 
@@ -23,7 +27,7 @@ label {
 p, a {
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
-  color: #919191;
+  color: #313131;
 }
 
 .App {

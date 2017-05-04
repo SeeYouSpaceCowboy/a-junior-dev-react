@@ -38,12 +38,15 @@ class SearchBar extends Component {
           this.state.sortedListing.map((listing, i) => {
             return (
               <div key={ i } className='col-12 card'>
-                <h1>{ listing.position } at { listing.company }</h1>
-                <h4>{ listing.street },  { listing.city } { listing.state } { listing.zipcode }</h4>
-                <h6>Compensation { listing.compensation }</h6>
-                <p className='justify'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum enim vitae pellentesque fringilla. Vivamus eleifend faucibus ipsum, nec rutrum nulla imperdiet lacinia. Phasellus euismod enim sit amet ante luctus, in rhoncus arcu egestas. Integer eu tempor quam. Fusce nec ante tellus.
-                </p>
+                <div className='row'>
+                  <div className='col-12'>
+                    <h2>{ listing.position } at { listing.company }</h2>
+                    <h4>{ listing.street },  { listing.city } { listing.state } { listing.zipcode } - { listing.shift } - ${ listing.compensation }</h4>
+                    <p className='justify'>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum enim vitae pellentesque fringilla. Vivamus eleifend faucibus ipsum, nec rutrum nulla imperdiet lacinia. Phasellus euismod enim sit amet ante luctus, in rhoncus arcu egestas. Integer eu tempor quam. Fusce nec ante tellus.
+                    </p>
+                  </div>
+                </div>
 
                 <div className='row'>
                   <div className='col-3'>
