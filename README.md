@@ -31,7 +31,7 @@ Things you need to install beforehand:
 Open terminal and run the following lines of code to clone and run this project.
 
  ```shell
- $ git clone https://github.com/SeeYouSpaceCowboy/yelp-search-reactjs.git
+ $ git clone https://github.com/SeeYouSpaceCowboy/a-junior-dev-react.git
  $ cd a-junior-dev-react
  $ npm i
  $ npm start
