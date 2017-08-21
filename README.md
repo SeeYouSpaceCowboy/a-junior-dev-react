@@ -15,7 +15,7 @@
     alt="A Junior Dev Screenshot"
     width="700" />
     </br>
-    A minimal job board created for new developers. See it [live](https://ajuniordev.herokuapp.com).
+    A minimal job board created for new developers. See it <a href='https://ajuniordev.herokuapp.com'>live</a>.
 </p>
 
 ## Getting Started with A Junior Dev
